@@ -1,7 +1,5 @@
-module github.com/tawsifkarim/do-app
+module github.com/digitalocean/sample-golang
 
-go 1.17
-
-require github.com/gorilla/mux v1.8.0
+go 1.13
 
 require github.com/gofrs/uuid v3.3.0+incompatible // indirect

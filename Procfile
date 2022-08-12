@@ -1,1 +1,1 @@
-web: bin/do-app
+web: bin/sample-golang
