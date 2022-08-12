@@ -15,7 +15,7 @@ WORKDIR $GOPATH/src/github.com/tawsifkarim/do-app
 RUN go get .
 
 RUN go build -v -o do-app
-RUN mv tracking-service /go/bin/do-app
+RUN mv do-app /go/bin/do-app
 
 ### Step 2
 
