@@ -1,0 +1,7 @@
+spec:
+  name: do-app
+  services:
+    - name: web
+      git:
+        branch: master
+        repo_clone_url: https://github.com/tawsifkarim/do-app.git
