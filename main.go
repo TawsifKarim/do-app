@@ -5,16 +5,20 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 )
-
-const port = "8080"
 
 func main() {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", rootHandler)
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "80"
+	}
 
 	fmt.Println("starting server at port:", port)
 
