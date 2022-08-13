@@ -1,6 +1,0 @@
-name: do-app
-services:
-  - name: web
-    github:
-      repo: tawsifkarim/do-app
-      branch: master
