@@ -17,10 +17,10 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "80"
+		port = "8080"
 	}
 
-	fmt.Println("starting server at port:", port)
+	fmt.Println("starting golang server at port:", port)
 
 	err := http.ListenAndServe("localhost:"+port, r)
 	if err != nil {
