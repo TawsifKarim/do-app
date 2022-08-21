@@ -31,7 +31,7 @@ func main() {
 
 	fmt.Println("starting golang server at port:", port)
 
-	err := http.ListenAndServe("localhost:"+port, r)
+	err := http.ListenAndServe("0.0.0.0:"+port, r)
 	if err != nil {
 		log.Fatal("Something went wrong starting the server", err)
 	}
