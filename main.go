@@ -54,13 +54,13 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println("json marshal error", err.Error())
 	}
-	req++
-	go func(reqx int) {
-		for i := 0; i < 500; i++ {
-			messages <- fmt.Sprintf("Task: %d of req %d", i, reqx)
-		}
+	// req++
+	// go func(reqx int) {
+	// 	for i := 0; i < 500; i++ {
+	// 		messages <- fmt.Sprintf("Task: %d of req %d", i, reqx)
+	// 	}
 
-	}(req)
+	// }(req)
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
