@@ -9,6 +9,7 @@ ENV GOOS="linux"
 ENV GOARCH="amd64"
 ENV GO11MODULE="on"
 
+
 COPY . $GOPATH/src/github.com/tawsifkarim/do-app
 WORKDIR $GOPATH/src/github.com/tawsifkarim/do-app
 
@@ -27,7 +28,8 @@ WORKDIR /root
 
 COPY --from=builder /go/bin/do-app /usr/local/bin/do-app
 
-
-ENV HOST 0.0.0.0
-EXPOSE 80
+# ENV HOST 0.0.0.0
+EXPOSE 8080
+# EXPOSE 8080
+# ENTRYPOINT ["do-app"]
 CMD ["do-app"]
