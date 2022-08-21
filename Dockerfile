@@ -28,7 +28,7 @@ WORKDIR /root
 COPY --from=builder /go/bin/do-app /usr/local/bin/do-app
 
 # ENV HOST 0.0.0.0
-EXPOSE 80
+EXPOSE 8080
 # EXPOSE 8080
 # ENTRYPOINT ["do-app"]
 CMD ["do-app"]
